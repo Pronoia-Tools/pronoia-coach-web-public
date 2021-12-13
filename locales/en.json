@@ -1,0 +1,35 @@
+
+{
+  "input":{
+    "select":"Select",
+    "search":"Search",
+    "send":"Send",
+    "cancel":"Cancel"
+  },
+  "language":{
+    "spanish":"Spanish",
+    "english":"English"
+  },
+  "workbook":{
+    "title": "All workbooks",
+    "filter": {
+      "subtitle": "Filter",
+      "title": "Title", 
+      "author": "Author", 
+      "language": "Language", 
+      "category": "Category", 
+      "price": "Price", 
+      "arrange": "Arrange by",
+      "apply": "Apply filters"
+    },
+    "categories":{
+      "novel":"Novel",
+      "biography":"Biography"
+    },
+    "arrange":{
+      "release":"Release date",
+      "popular":"Popular",
+      "price":"Price"
+    }    
+  }
+}

@@ -1,3 +1,4 @@
+import i18n from './config/i18n'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -32,6 +33,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -51,5 +53,10 @@ export default {
   build: {},
   server: {
     port: 3001 // default: 3000
+  },
+  i18n: {
+    locales: ['en', 'fr', 'es'],
+    defaultLocale: 'en',
+    vueI18n: i18n
   }
 }
