@@ -1,16 +1,17 @@
 <template>
   <div class="container w-10/12 mx-auto md:mx-auto my-5">
-    <h1 class="text-lgText">{{ $t(`workbook.title`) }}</h1>
+    <h1 class="text-lgText">{{ $t(`index.title`) }}</h1>
     <div class="border border-black h-full">
       <div class="border-b border-black px-5">
         <h2 class="text-lgText my-5">
-          {{ $t(`workbook.filter.subtitle`) }}
+          <fa-icon icon="filter"/>
+          {{ $t(`index.filter.subtitle`) }}
         </h2>
         <div class="flex md:flex-row flex-col justify-around gap-5">
           <div class="flex flex-col">
             <div class="flex justify-end my-5">
               <label class="mr-4">
-                {{ $t(`workbook.filter.title`) }}</label
+                {{ $t(`index.filter.title`) }}</label
               >
               <input
                 class="border-2 border-border rounded-md w-full "
@@ -19,7 +20,7 @@
             </div>
             <div class="flex justify-end">
               <label class="mr-4">
-                {{ $t(`workbook.filter.author`) }}</label
+                {{ $t(`index.filter.author`) }}</label
               >
               <input
                 name="author"
@@ -31,7 +32,7 @@
           <div class="flex flex-col">
             <div class="flex justify-end my-5 items-center">
               <label class="mr-4">
-                {{ $t(`workbook.filter.language`) }}</label
+                {{ $t(`index.filter.language`) }}</label
               >
 
               <select
@@ -47,7 +48,7 @@
             </div>
             <div class="flex justify-end items-center">
               <label class="mr-4">
-                {{ $t(`workbook.filter.category`) }}</label
+                {{ $t(`index.filter.category`) }}</label
               >
               <select
                 class="border-2 border-border rounded-md w-full px-7 py-1"
@@ -64,7 +65,7 @@
           <div class="flex flex-col">
             <div class="flex justify-end my-5">
               <label class="mr-4">
-                {{ $t(`workbook.filter.price`) }}</label
+                {{ $t(`index.filter.price`) }}</label
               >
               <input
                 v-model="searchPrice1"
@@ -84,7 +85,7 @@
             </div>
             <div class="flex justify-end items-center">
               <label class="mr-4">
-                {{ $t(`workbook.filter.arrange`) }}</label
+                {{ $t(`index.filter.arrange`) }}</label
               >
               <select
                 v-model="arrangeBy"
@@ -105,7 +106,7 @@
             @click="print = true"
             class="text-darkLogo border border-darkLogo py-3 px-8 mx-5"
           >
-            {{ $t(`workbook.filter.apply`) }}
+            {{ $t(`index.filter.apply`) }}
           </button>
           <button
             @click="print = false"
@@ -123,9 +124,16 @@
           :key="workbook.id"
           class="flex justify-center items-center m-10 w-32 border border-transparent hover:border-gray-500 transition-all cursor-pointer"
         >
-          <img :alt="workbook.title" :src="workbook.image" />
-          <span>{{workbook.title}}</span>
+          <Workbook 
+            :title="workbook.title" 
+            :image="workbook.image"
+            :author="workbook.author"
+            :language="workbook.language"
+            :description="workbook.description"
+            :price="workbook.price" 
+          />
         </div>
+        
       </div>
     </div>
   </div>
@@ -134,10 +142,12 @@
 <script>
 
 import { mapGetters } from "vuex";
+import Workbook from '~/components/Workbook.vue';
+
 export default {
   name: "IndexPage",
   components: { 
-
+    Workbook
   },
   data() {
     return {

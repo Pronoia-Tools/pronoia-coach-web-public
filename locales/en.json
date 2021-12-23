@@ -16,7 +16,7 @@
     "logout":"Logout",
     "settings":"Settings"
   },
-  "workbook":{
+  "index":{
     "title": "All workbooks",
     "filter": {
       "subtitle": "Filter",
@@ -37,5 +37,12 @@
       "popular":"Popular",
       "price":"Price"
     }    
+  },
+  "workbook":{
+    "title":"Title",
+    "author":"Author",
+    "language":"Language",
+    "description":"Description",
+    "price":"Price"
   }
 }
