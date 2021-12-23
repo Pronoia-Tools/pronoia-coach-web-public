@@ -10,6 +10,12 @@
     "spanish":"Spanish",
     "english":"English"
   },
+  "navbar":{
+    "login":"Login",
+    "register":"Register",
+    "logout":"Logout",
+    "settings":"Settings"
+  },
   "workbook":{
     "title": "All workbooks",
     "filter": {

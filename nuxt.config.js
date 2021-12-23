@@ -25,6 +25,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -58,5 +59,11 @@ export default {
     locales: ['en', 'fr', 'es'],
     defaultLocale: 'en',
     vueI18n: i18n
+  },
+  fontawesome: {
+    component:"fa-icon",
+    icons: {
+      solid: ['faTimes','faQuestionCircle','faShoppingCart','faBookOpen','faBell','faBars','faUser'],
+    }
   }
 }
