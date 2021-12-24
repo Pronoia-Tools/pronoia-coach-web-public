@@ -22,7 +22,12 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ['hover', 'focus',"group-hover"],
+      width: ["responsive", "hover", "focus","group-hover"],
+      height: ["responsive", "hover", "focus","group-hover"],
+      visibility: ["responsive", "hover", "focus","group-hover"],
+    },
   },
   plugins: [],
 };

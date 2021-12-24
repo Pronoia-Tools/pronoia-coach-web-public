@@ -10,7 +10,13 @@
     "spanish":"Spanish",
     "english":"English"
   },
-  "workbook":{
+  "navbar":{
+    "login":"Login",
+    "register":"Register",
+    "logout":"Logout",
+    "settings":"Settings"
+  },
+  "index":{
     "title": "All workbooks",
     "filter": {
       "subtitle": "Filter",
@@ -31,5 +37,12 @@
       "popular":"Popular",
       "price":"Price"
     }    
+  },
+  "workbook":{
+    "title":"Title",
+    "author":"Author",
+    "language":"Language",
+    "description":"Description",
+    "price":"Price"
   }
 }

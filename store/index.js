@@ -7,11 +7,11 @@ export const state = () => ({
         "image": "https://firebasestorage.googleapis.com/v0/b/pronoia-test-1aeb6.appspot.com/o/Galery%2Fvi_manuel28%40hotmail.com%2Fp%C3%A1gina05.jpg_1636494340996?alt=media&token=fe7e3162-3724-4f45-a67b-0942a9b720b7",
         "published": "2021-11-02T05:41:21.264Z",
         "edition": 1,
-        "language": "",
+        "language": "Spanish",
         "price": 999999999,
         "currency": "",
         "status": "Editable",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorem vel ipsam laudantium, fugiat perspiciatis praesentium itaque accusantium veniam. Possimus doloremque modi dicta distinctio sequi temporibus odit. Esse, animi libero.",
         "author": {
           "id": 2,
           "uuid": "r9sJSWzojtQVazu3U6STlwGJqwx2",
@@ -41,7 +41,7 @@ export const state = () => ({
         "price": 1111,
         "currency": "Spanish",
         "status": "Editable",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorem vel ipsam laudantium, fugiat perspiciatis praesentium itaque accusantium veniam. Possimus doloremque modi dicta distinctio sequi temporibus odit. Esse, animi libero.",
         "author": {
           "id": 2,
           "uuid": "r9sJSWzojtQVazu3U6STlwGJqwx2",
