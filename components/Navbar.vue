@@ -26,24 +26,28 @@
       
       <fa-icon icon="bars" @click="toggleOpenMovileMenu" class="cursor-pointer md:hidden"/>
       
-      <div class="flex gap-2 justify-center items-center">
-        <span>User name</span>
+      <div class="flex gap-2 justify-center items-center" v-if="$auth.loggedIn">
+        <span>{{$auth.user.firsName}} {{$auth.user.secondName}}</span>
         <div class="bg-gray-400 p-2 rounded-full w-8 h-8 flex justify-center items-center">
           <fa-icon icon="user"/>
         </div>
         <ButtonGroupVue :alignMenuY="'left'">
-          <ButtonAppVue>
+          <!-- <ButtonAppVue>
             <span>{{ $t(`navbar.settings`) }}</span> 
-          </ButtonAppVue>
+          </ButtonAppVue> -->
           <ButtonAppVue>
             <span @click="logoutHandler">{{ $t(`navbar.logout`) }}</span>
           </ButtonAppVue>
         </ButtonGroupVue>
       </div>
 
-      <div class="flex gap-2">
-        <ButoomCustomVue @click="$router.push({name:'login'})">{{ $t(`navbar.login`) }}</ButoomCustomVue>
-        <ButoomCustomVue @click="$router.push({name:'sign-up'})">{{ $t(`navbar.register`) }}</ButoomCustomVue>
+      <div class="flex gap-2" v-else>
+        <ButoomCustomVue>
+          <nuxt-link to="/login">{{ $t(`navbar.login`) }}</nuxt-link>
+        </ButoomCustomVue>
+        <!-- <ButoomCustomVue>
+          <nuxt-link to="/register">{{ $t(`navbar.register`) }}</nuxt-link>
+        </ButoomCustomVue> -->
       </div>
 
 
@@ -85,7 +89,7 @@ export default {
     //   }
     // },
     logoutHandler(){
-      // this.logout;
+      this.$auth.logout();
     }
   },
   computed:{
