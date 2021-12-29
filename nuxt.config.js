@@ -16,7 +16,9 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+  '~plugins/vee-validate.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,6 +37,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/i18n',
+    '@nuxtjs/auth-next',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -51,7 +54,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile:['vee-validate/dist/rules'] 
+  },
   server: {
     port: 3001 // default: 3000
   },
@@ -65,5 +70,28 @@ export default {
     icons: {
       solid: ['faTimes','faQuestionCircle','faShoppingCart','faBookOpen','faBell','faBars','faUser','faFilter'],
     }
+  },
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'token',
+          global: true,
+          // type: 'Bearer',
+          // required: true,
+        },
+        user: {
+          property: 'user',
+          // autoFetch: false
+        },
+        endpoints: {
+          login: { url: '/auth/login', method: 'post' },
+          logout: { url: '/auth/logout', method: 'post' },
+          user: { url: '/auth/user', method: 'get',}
+        }
+      }
+    }
   }
+  
+  
 }
