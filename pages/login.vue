@@ -18,7 +18,7 @@
 
       <!-- Password -->
       <ValidationProvider name="password" rules="required" v-slot="{ errors }" class="my-4">
-        <input v-model="password" type="password" placeholder="Password" class=" border border-gray-300 py-2">
+        <input v-model="password" type="password" placeholder="Password" class="border border-gray-300 py-2">
         <span class="block text-red-400">{{ errors[0] }}</span>
       </ValidationProvider>
       
@@ -42,7 +42,7 @@ export default {
   name: "Login",
   components: {},
   data() {
-    return { email: "test1@gmail.com", password: "test1@gmail.com" };
+    return { email: "", password: "" };
   },
   computed: {
     // ...mapState("auth", ["isAuthenticated", "user"]),
