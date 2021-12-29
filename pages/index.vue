@@ -1,5 +1,5 @@
 <template>
-  <div class="container w-10/12 mx-auto md:mx-auto my-5">
+  <div class="container w-11/12 mx-auto md:mx-auto my-5">
     <h1 class="text-lgText">{{ $t(`index.title`) }}</h1>
     <div class="border border-black h-full">
       <div class="border-b border-black px-5">
@@ -120,7 +120,7 @@
         class="grid md:grid-cols-4 grid-cols-2 container mx-auto"
       >
         <div
-          v-for="workbook in workBooksList"
+          v-for="workbook in $store.state.workbooks"
           :key="workbook.id"
           class="flex justify-center items-center m-10 w-32 border border-transparent hover:border-gray-500 transition-all cursor-pointer"
         >
@@ -160,6 +160,17 @@ export default {
       arrangeBy: "",
       print: false,
     };
+  },
+  async fetch({$axios,store}){
+    try {
+      let {data} = await $axios.get("/workbook/public")
+      console.log(data)
+
+
+      store.commit("SET_WORKBOOKS",data)
+    } catch (error) {
+      
+    }
   },
   computed: {
     ...mapGetters(["getWorkbooks", "getWorkBookFilter"]),
