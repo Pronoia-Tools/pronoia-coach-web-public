@@ -11,6 +11,7 @@
     :class="isOpen">
       <fa-icon icon="times" class=" self-end m-5 text-xl md:hidden" @click="toggleOpenMovileMenu"/>
       <nuxt-link to="/author">Author</nuxt-link>
+      <nuxt-link to="/library">Library</nuxt-link>
       <fa-icon icon="question-circle" class=" text-2xl"/>
       <div class="relative">
         <div class="bg-blue-500 w-4 h-4 flex justify-center items-center text-center text-white rounded-full border border-black text-xs absolute -top-2 -right-2">2</div>

@@ -49,5 +49,9 @@
   "author":{
     "title":"Name of author",
     "inputPlaceholder":"Title or Author"
+  },
+  "library":{
+    "title":"Library",
+    "inputPlaceholder":"Title or Author"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-red-500 relative group">
+  <div class="relative group">
     <img v-if="image" :src="image" :alt="title" class="w-36 h-48 object-center object-cover relative z-10">
     <img v-else src="~/assets/no-image.png" :alt="title" class="w-36 h-48 object-center object-fill relative z-10">
     <div class="absolute invisible w-64 opacity-0 bg-white border-2 border-gray-300 rounded-md top-10 left-8 py-4 px-5 z-40 group-hover:visible group-hover:opacity-100 transition-all duration-500 cursor-default">
