@@ -9,7 +9,7 @@ module.exports = {
         lgText: "2rem",
       },
       colors: {
-        myPurple: "#666699",
+        myPurple: "#414BB2",
         myOrange: "#E09900",
         myGreen: "#7DC5BA",
         myLightGreen: "#8FD14F",

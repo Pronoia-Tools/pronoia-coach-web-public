@@ -43,6 +43,15 @@
     "author":"Author",
     "language":"Language",
     "description":"Description",
-    "price":"Price"
+    "price":"Price",
+    "details":"Details"
+  },
+  "author":{
+    "title":"Name of author",
+    "inputPlaceholder":"Title or Author"
+  },
+  "library":{
+    "title":"Library",
+    "inputPlaceholder":"Title or Author"
   }
 }

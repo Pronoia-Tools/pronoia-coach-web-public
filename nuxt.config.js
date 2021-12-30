@@ -68,7 +68,7 @@ export default {
   fontawesome: {
     component:"fa-icon",
     icons: {
-      solid: ['faTimes','faQuestionCircle','faShoppingCart','faBookOpen','faBell','faBars','faUser','faFilter'],
+      solid: ['faTimes','faQuestionCircle','faShoppingCart','faBookOpen','faBell','faBars','faUser','faFilter','faSearch','faArrowCircleRight'],
     }
   },
   auth: {

@@ -1,7 +1,7 @@
 <template>
-  <div class="container w-10/12 mx-auto md:mx-auto my-5">
+  <div class="container w-11/12 mx-auto md:mx-auto my-5">
     <h1 class="text-lgText">{{ $t(`index.title`) }}</h1>
-    <div class="border border-black h-full">
+    <div class="border border-black h-full py-10">
       <div class="border-b border-black px-5">
         <h2 class="text-lgText my-5">
           <fa-icon icon="filter"/>
@@ -116,11 +116,10 @@
           </button>
         </div>
       </div>
-      <div
-        class="grid md:grid-cols-4 grid-cols-2 container mx-auto"
+      <div class="grid md:grid-cols-4 grid-cols-2 container mx-auto"
       >
         <div
-          v-for="workbook in workBooksList"
+          v-for="workbook in $store.state.workbooks"
           :key="workbook.id"
           class="flex justify-center items-center m-10 w-32 border border-transparent hover:border-gray-500 transition-all cursor-pointer"
         >
@@ -133,8 +132,9 @@
             :price="workbook.price" 
           />
         </div>
-        
       </div>
+      
+      <Pagination class="my-10"></Pagination>
     </div>
   </div>
 </template>
@@ -142,12 +142,14 @@
 <script>
 
 import { mapGetters } from "vuex";
+import Pagination from '~/components/Pagination.vue';
 import Workbook from '~/components/Workbook.vue';
 
 export default {
   name: "IndexPage",
   components: { 
-    Workbook
+    Workbook,
+    Pagination
   },
   data() {
     return {
@@ -160,6 +162,17 @@ export default {
       arrangeBy: "",
       print: false,
     };
+  },
+  async fetch({$axios,store}){
+    try {
+      let {data} = await $axios.get("/workbook/public")
+      console.log(data)
+
+
+      store.commit("SET_WORKBOOKS",data)
+    } catch (error) {
+      
+    }
   },
   computed: {
     ...mapGetters(["getWorkbooks", "getWorkBookFilter"]),

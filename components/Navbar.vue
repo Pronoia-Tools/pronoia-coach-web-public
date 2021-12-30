@@ -10,7 +10,8 @@
     md:justify-end md:gap-6 md:relative md:h-auto md:w-auto md:flex-row md:left-0 md:bg-opacity-0 md:text-black md:mr-5"
     :class="isOpen">
       <fa-icon icon="times" class=" self-end m-5 text-xl md:hidden" @click="toggleOpenMovileMenu"/>
-      
+      <nuxt-link to="/author">Author</nuxt-link>
+      <nuxt-link to="/library">Library</nuxt-link>
       <fa-icon icon="question-circle" class=" text-2xl"/>
       <div class="relative">
         <div class="bg-blue-500 w-4 h-4 flex justify-center items-center text-center text-white rounded-full border border-black text-xs absolute -top-2 -right-2">2</div>
@@ -18,7 +19,6 @@
       </div>
       <fa-icon icon="book-open" class=" text-2xl"/>
       <fa-icon icon="bell" class=" text-2xl"/>
-
     </div>
 
     <!-- USER -->
