@@ -90,8 +90,11 @@ export default {
           user: { url: '/auth/user', method: 'get',}
         }
       }
-    }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      home: '/'
+    },
   }
-  
-  
 }

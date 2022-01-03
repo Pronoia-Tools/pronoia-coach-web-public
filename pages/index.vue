@@ -163,17 +163,17 @@ export default {
       print: false,
     };
   },
-  async fetch({$axios,store}){
-    try {
-      let {data} = await $axios.get("/workbook/public")
-      console.log(data)
+  // async fetch({$axios,store}){
+  //   try {
+  //     let {data} = await $axios.get("/workbook/public")
+  //     console.log(data)
 
 
-      store.commit("SET_WORKBOOKS",data)
-    } catch (error) {
+  //     store.commit("SET_WORKBOOKS",data)
+  //   } catch (error) {
       
-    }
-  },
+  //   }
+  // },
   computed: {
     ...mapGetters(["getWorkbooks", "getWorkBookFilter"]),
     workBooksList() {
