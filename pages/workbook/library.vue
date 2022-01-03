@@ -1,7 +1,8 @@
 <template>
   <div class="container w-11/12 mx-auto md:mx-auto my-5">
     <!-- TITLE -->
-    <h1 class="text-lgText">{{ $t(`author.title`) }}</h1>
+    <fa-icon icon="book-open" class=" text-4xl text-myLightGreen"/>
+    <h1 class="text-lgText inline-block text-myLightGreen">{{ $t(`library.title`) }}</h1>
     
     <!-- SEARCH BAR -->
     <div class="flex flex-row-reverse mt-4 mb-2">
@@ -18,6 +19,7 @@
         <WorkbookDetails 
           v-for="workbook in $store.state.workbooks"
           :key="workbook.id"
+          :id="workbook.id"
           :title="workbook.title" 
           :image="workbook.image"
           :author="workbook.author"

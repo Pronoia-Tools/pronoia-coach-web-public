@@ -10,7 +10,7 @@
 
       <div class="flex justify-end items-center ">
         <div class="cursor-pointer group ">
-          <p class=" text-myGreen inline group-hover:text-opacity-50 transition duration-300">{{$t("workbook.details")}}</p>
+          <nuxt-link :to="`/workbook/${id}`" class=" text-myGreen inline group-hover:text-opacity-50 transition duration-300">{{$t("workbook.details")}}</nuxt-link>
           <fa-icon icon="arrow-circle-right" class="ml-2 text-myLightBlue group-hover:text-opacity-50 transition duration-300"/>
         </div>
       </div>
@@ -21,6 +21,10 @@
 <script>
 export default {
   props:{
+    id:{
+      type:Number,
+      required:true
+    },
     image:{
       type:String,
       required:true

@@ -8,6 +8,14 @@ export const getWorkbooks = (state) => {
   return workbooks;
 };
 
+export const getWorkbookById = (state) => (idWokbook) => {
+  const workbook = state.workbooks.find(workbook => workbook.id === parseInt(idWokbook));
+  console.log(workbook,idWokbook)
+  if (!workbook) return;
+
+  return workbook;
+};
+
 export const getWorkBookFilter = (state) => (
   title = "",
   author = "",

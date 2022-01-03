@@ -4,7 +4,9 @@
     "select":"Select",
     "search":"Search",
     "send":"Send",
-    "cancel":"Cancel"
+    "cancel":"Cancel",
+    "open":"Open",
+    "sendInvite":"send an invite"
   },
   "language":{
     "spanish":"Spanish",
@@ -53,5 +55,30 @@
   "library":{
     "title":"Library",
     "inputPlaceholder":"Title or Author"
+  },
+  "workbookDetails":{
+    "pageTitle":"Library",
+    "subtitle":"Workbook Information",
+    "title":"Title",
+    "by":"By",
+    "edition":"Edition",
+    "language":"Language",
+    "published":"Published",
+    "price":"Price",
+    "tags":"Tags",
+    "sharedWith":"Shared with",
+    "description":"Description",
+    "Access":"Access management",
+    "table":{
+      "coach":"Mi coach",
+      "view":{
+        "view":"View",
+        "options":{
+          "wholeWorkbook":"Whole workbook",  
+          "questions":"Questions"  
+        }
+      },
+      "permission":"Permission"
+    }
   }
 }
